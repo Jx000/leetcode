@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /**
+     * @param {number[]} nums
+     * @param {number} target
+     * @return {number[]}
+     * 2 <= nums.length <= 10^3
+     * -10^9 <= nums[i] <= 10^9
+     * -10^9 <= target <= 10^9
+     */
+    const NUMS = [3, 2, 3]
+    const twoSum = function(nums, target) {
+        let arr = []
+        for(let i = 0; i < nums.length; i++){
+            for(let j = i + 1; j < nums.length; j++ ){
+                if(nums[i] + nums[j] === target){
+                    arr[0] = i
+                    arr[1] = j
+                }
+            }
+        }
+        return arr
+    };
+    console.log(twoSum(NUMS, 6))
+
+</script>
+</html>
